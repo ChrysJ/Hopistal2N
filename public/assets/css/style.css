@@ -1,0 +1,483 @@
+/* Reset CSS */
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Font family */
+@font-face {
+    font-family: "sora";
+    src: url("../fonts/Sora-Bold.ttf");
+}
+
+@font-face {
+    font-family: "titilium";
+    src: url("../fonts/TitilliumWeb-Regular.ttf");
+}
+
+
+/* Set color */
+body {
+    color: #1F1F1F;
+    background-image: linear-gradient(to right top, #55a1e8, #00b6f0, #00c9ea, #00dad9, #4ce7c1);
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* Display flex */
+nav ul li,
+nav ul li a,
+.btn-backto,
+main,
+.nav-patient-profile li,
+.btn-list a,
+.btn-list .btn-delete,
+.icons-information-patient,
+.patient div span i,
+.appointments span:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Bouton */
+.btn,
+.btn-backto {
+    color: #fbfbfb;
+    background-color: #00b6f0;
+    border: 2px solid #fbfbfb;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.279);
+    border-radius: 20px;
+    font-family: "sora", sans-serif;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn {
+    padding: 10px 20px;
+}
+
+.btn-backto {
+    padding: 5px 10px;
+    position: fixed;
+    top: 2rem;
+    left: 5rem;
+}
+
+.btn-backto i {
+    margin-right: 10px;
+}
+
+
+
+/* Sidebar */
+nav {
+    width: 3.2rem;
+    height: 100vh;
+    background-color: #fbfbfb;
+    border-right: 2px solid #00b6f0;
+    position: fixed;
+    left: 0;
+}
+
+nav ul li img {
+    padding: 0.2rem;
+}
+
+nav ul li a {
+    width: 100%;
+    height: 100%;
+    background-color: #24a1ca;
+    height: 50px;
+    border-bottom: 1px solid #fbfbfb;
+}
+
+nav ul li a:hover {
+    background-color: #00b6f0;
+}
+
+.nav-active {
+    background-color: #00b6f0;
+}
+
+nav ul li a i {
+    color: #fbfbfb;
+    font-size: 1.3rem;
+}
+
+/* Main */
+main {
+    margin-left: auto;
+    width: calc(100% - 50px);
+    flex-direction: column;
+}
+
+h1,
+h2 {
+    color: #fbfbfb;
+    font-family: 'sora', sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 2rem 0;
+    text-shadow: 1px 1px 2px #1f1f1f58;
+}
+
+/* Formulaire */
+
+.form-add {
+    background-color: #fbfbfb;
+    width: fit-content;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.279);
+    width: min(28rem);
+}
+
+.form-add div {
+    margin-bottom: 1.5rem;
+}
+
+.form-add div:last-child {
+    margin-bottom: 0;
+}
+
+.form-add div .form-label,
+.form-add div .form-input {
+    display: block;
+    font-family: 'titilium', sans-serif;
+}
+
+.form-add div .form-label {
+    margin-bottom: 0.5rem;
+}
+
+.form-add div .form-input {
+    padding: 5px;
+    width: 100%;
+    border-radius: 5px;
+    border: 0;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.279);
+}
+
+.input-error-text {
+    margin-top: 0.5rem;
+    color: rgb(245, 41, 41);
+}
+
+.submit .btn {
+    display: block;
+    margin: 2rem auto 0;
+}
+
+/* Liste des patients */
+section {
+    background: transparent;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.297);
+    border-radius: 1rem 1rem 0 0;
+    height: fit-content;
+    width: min(70rem, max(90rem));
+}
+
+.box-data,
+.box-users {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #fbfbfb
+}
+
+.box-data {
+    border-radius: 1rem 1rem 0 0;
+    text-transform: uppercase;
+    font-weight: 900;
+    background-color: #00B6F0;
+    color: #fbfbfb;
+    padding: 1.5rem;
+}
+
+.box-users {
+    margin: 0.2rem 0;
+    padding: 1.4rem;
+}
+
+.box-data span,
+.box-users span {
+    width: 15rem;
+}
+
+.btn-list {
+    position: absolute;
+    right: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-list a,
+.btn-delete,
+.icons-information-patient {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.297);
+}
+
+.btn-list a,
+.btn-delete {
+    cursor: pointer;
+    background-color: #fbfbfb;
+}
+
+.btn-list a {
+    color: #00b6f0;
+    border: 2px solid #00B6F0;
+    margin-right: 1rem;
+}
+
+.btn-list a:hover {
+    background-color: #00b6f0;
+    color: #fbfbfb;
+}
+
+.btn-list .btn-delete {
+    color: #cd3551;
+    border: 2px solid #cd3551;
+}
+
+.btn-list .btn-delete:hover {
+    color: #fbfbfb;
+    background-color: #cd3551;
+}
+
+
+/* UserProfile */
+.patient-profile {
+    background-color: #fbfbfb;
+    border-radius: 1rem;
+    padding: 5rem 2rem 2rem 2rem;
+    position: relative;
+    width: 38rem;
+    margin-top: 5rem;
+}
+
+.nav-patient-profile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.nav-patient-profile li {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+    background-color: #24A1CA;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #fbfbfb;
+    color: #fbfbfb;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 0.9rem;
+}
+
+.nav-patient-profile li:hover {
+    background-color: #00b6f0;
+}
+
+.nav-patient-active {
+    background-color: #00b6f0 !important;
+}
+
+.patient-profile h1,
+.patient-profile h2 {
+    color: #00b6f0;
+    font-size: 1.8rem;
+    margin-top: 0;
+    text-align: center;
+}
+
+.patient {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-gap: 1rem;
+}
+
+.icons-information-patient {
+    background-color: #00b6f0;
+    color: #fbfbfb;
+}
+
+.patient img {
+    border-radius: 1rem;
+    border: 3px solid #00b6f0;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.297);
+    padding-top: 1rem;
+    width: 100%;
+    grid-column: 1 / 2;
+}
+
+.patient div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.patient div span,
+.patient div h3 {
+    margin-top: 1rem;
+}
+
+.patient div span {
+    display: flex;
+    align-items: center;
+}
+
+.patient div span i {
+    margin-right: 10px;
+}
+
+/* form update patient */
+.form-update-patient {
+    background-color: unset;
+    width: fit-content;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: unset;
+    width: min(25rem);
+    margin: 0 auto;
+}
+
+/* rendezvous patient */
+.appointments {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-items: center;
+    box-shadow: 0 0 4px rgb(0 0 0 / 28%);
+    border-radius: 10px;
+    background-color: #fbfbfb;
+    margin-bottom: 1rem;
+}
+
+.appointments span {
+    font-weight: 600;
+    width: fit-content;
+}
+
+.appointments span:first-child {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #00B6F0;
+    border-radius: 10px;
+    color: #fbfbfb;
+    text-transform: uppercase;
+}
+
+.switch-box-patient {
+    display: none;
+}
+
+/* Recherche patient*/
+.form-search label,
+.form-search a {
+    font-size: 1rem;
+    text-transform: initial;
+    font-weight: 100;
+    color: #fbfbfb;
+}
+
+.form-search a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.form-search div {
+    display: flex;
+    margin: 0.5rem 0;
+    height: 2rem;
+}
+
+.form-search div .form-input {
+    padding: 5px;
+    border-radius: 5px 0 0 5px;
+    border: 2px solid #009dff;
+    box-shadow: 0 0 0px rgb(0 0 0 / 28%);
+    height: 100%;
+    width: 15rem;
+}
+
+.form-search div button {
+    width: 32px;
+    height: 100%;
+    background-color: #00B6F0;
+    color: #fbfbfb;
+    border: 0;
+    border-radius: 0 5px 5px 0;
+    box-shadow: 0 0 4px rgb(0 0 0 / 28%);
+    cursor: pointer;
+}
+
+
+/* pagination */
+.pagination {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+}
+
+.pagination li {
+    border-radius: 5px;
+    height: 2.3rem;
+    width: 2.3rem;
+    margin: 10px;
+    background-color: #24A1CA;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.279);
+}
+
+.pagination li.active {
+    background-color: #009dff;
+}
+
+.pagination li:hover {
+    background-color: #009dff;
+}
+
+.pagination li a {
+    color: #fbfbfb;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.message {
+    color: #fbfbfb;
+    background-color: #00b6f0;
+    border: 2px solid #fbfbfb;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.279);
+    border-radius: 20px;
+    font-family: "sora", sans-serif;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+}
